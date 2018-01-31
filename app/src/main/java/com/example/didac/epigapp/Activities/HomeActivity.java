@@ -1,11 +1,10 @@
 package com.example.didac.epigapp.Activities;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
-
 
 import com.example.didac.epigapp.Fragments.DashboardFragment;
 import com.example.didac.epigapp.Fragments.HomeFragment;
@@ -19,8 +18,6 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
-
-import android.support.v4.app.Fragment;
 
 
 
@@ -81,11 +78,14 @@ public class HomeActivity extends AppCompatActivity {
                                 getSupportFragmentManager().beginTransaction()
                                         .replace(R.id.content_layout, fragment)
                                         .commit();
+                                break;
                             case 1:
                                 fragment = new DashboardFragment();
                                 getSupportFragmentManager().beginTransaction()
                                         .replace(R.id.content_layout, fragment)
                                         .commit();
+                                break;
+
 
                         }
 
